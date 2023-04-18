@@ -5,7 +5,7 @@
 ** server
 */
 
-#include "server.h"
+#include "../include/server.h"
 
 int init_server(server_t *server, int port)
 {
