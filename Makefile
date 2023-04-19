@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-NAME	=	myftp
+NAME	=	myteams_server
 
 SRC		=	$(wildcard src/*.c) \
 			$(wildcard src/command/*.c)

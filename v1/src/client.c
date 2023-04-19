@@ -24,4 +24,3 @@ int init_client(server_t *client, int port)
     }
     return (0);
 }
-

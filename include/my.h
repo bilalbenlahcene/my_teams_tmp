@@ -20,6 +20,7 @@
 
 #define FAILURE 84
 #define BUFSIZE 1024
+#define
 
 // return types
 typedef struct {

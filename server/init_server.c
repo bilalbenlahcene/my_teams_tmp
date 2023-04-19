@@ -41,7 +41,7 @@ void create_client(server_t *server)
     }
 }
 
-int check_dir (char *path)
+int check_dir(char *path)
 {
     DIR *dirptr;
 
