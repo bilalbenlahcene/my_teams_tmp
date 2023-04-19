@@ -5,30 +5,30 @@
 ** init
 */
 
-#include "my.h"
+#include "../include/my_teams.h"
 
-server_t *init_server(const char **av)
-{
-    server_t *server = malloc(sizeof(server_t));
-    int opt = 1;
-
-    server->fd = socket(PF_INET, SOCK_STREAM, 0);
-    if (server->fd == -1)
-        error_handling("socket error");
-    server->sockaddr.sin_family = AF_INET;
-    server->sockaddr.sin_port = htons(atoi(av[1]));
-    server->addrlen = sizeof(server->sockaddr);
-    if (setsockopt(server->fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt,
-                   sizeof(opt)))
-        error_handling("setsockopt error");
-    if (bind(server->fd, (struct sockaddr *)&server->sockaddr,
-             sizeof(server->sockaddr)) < 0)
-        error_handling("bind error");
-    if (listen(server->fd, 5) == -1)
-        error_handling("listen error");
-    server->port = atoi(av[1]);
-    return (server);
-}
+//server_t *init_server(const char **av)
+//{
+//    server_t *server = malloc(sizeof(server_t));
+//    int opt = 1;
+//
+//    server->fd = socket(PF_INET, SOCK_STREAM, 0);
+//    if (server->fd == -1)
+//        error_handling("socket error");
+//    server->sockaddr.sin_family = AF_INET;
+//    server->sockaddr.sin_port = htons(atoi(av[1]));
+//    server->addrlen = sizeof(server->sockaddr);
+//    if (setsockopt(server->fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt,
+//                   sizeof(opt)))
+//        error_handling("setsockopt error");
+//    if (bind(server->fd, (struct sockaddr *)&server->sockaddr,
+//             sizeof(server->sockaddr)) < 0)
+//        error_handling("bind error");
+//    if (listen(server->fd, 5) == -1)
+//        error_handling("listen error");
+//    server->port = atoi(av[1]);
+//    return (server);
+//}
 
 void create_client(server_t *server)
 {

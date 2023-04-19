@@ -5,7 +5,7 @@
 ** main
 */
 
-#include "my.h"
+#include "../include/my_teams.h"
 
 void command(server_t *s, char *str)
 {

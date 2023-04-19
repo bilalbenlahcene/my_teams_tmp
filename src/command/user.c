@@ -5,7 +5,7 @@
 ** user
 */
 
-#include "my.h"
+#include "../../include/my_teams.h"
 
 int my_strcmp(char *s1, char *s2)
 {

@@ -5,9 +5,7 @@
 ** utils
 */
 
-
-
-#include "my.h"
+#include "../include/my_teams.h"
 
 int is_number(const char *str)
 {

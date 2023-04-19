@@ -16,12 +16,18 @@
 #include <sys/socket.h>
 #include <stdarg.h>
 #include <sys/time.h>
+#include <sys/types.h>
+#include <errno.h>
 #include <dirent.h>
 
 #define FAILURE 84
 #define BUFSIZE 1024
 
-// return types
+#define MAX_NAME_LENGTH 32
+#define MAX_DESCRIPTION_LENGTH 255
+#define MAX_BODY_LENGTH 512
+#define MAX_CLIENTS 30
+
 typedef struct {
     struct sockaddr_in sockaddr;
     int fd;
@@ -73,5 +79,6 @@ static const struct cmd cmd_atgs[] = {
     {"QUIT", &quit},
     {"HELP", &help},
     {"NOOP", &noop},
-    {"CWD", &cwd}
+    {"CWD", &cwd},
+    {NULL, NULL}
 };

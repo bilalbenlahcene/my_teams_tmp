@@ -1,14 +1,15 @@
 ##
 ## EPITECH PROJECT, 2023
-## my_teams_tmp
+## Makefile
 ## File description:
 ## Makefile
 ##
 
-NAME	=	myftp
+NAME	=	myteams_cli
 
-SRC		=	$(wildcard src/*.c) \
-			$(wildcard src/command/*.c)
+SRC		=	./cli/src/init.c \
+			./cli/src/command/user.c \
+			./cli/src/main.c
 
 OBJ		=	$(SRC:.c=.o)
 
