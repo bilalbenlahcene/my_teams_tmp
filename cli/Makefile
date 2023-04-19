@@ -7,9 +7,8 @@
 
 NAME	=	myteams_cli
 
-SRC		=	./cli/src/init.c \
-			./cli/src/command/user.c \
-			./cli/src/main.c
+SRC		=	./main.c \
+			$(wildcard ../src/*.c)
 
 OBJ		=	$(SRC:.c=.o)
 

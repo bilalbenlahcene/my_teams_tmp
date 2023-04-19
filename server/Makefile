@@ -7,7 +7,9 @@
 
 NAME	=	myteams_server
 
-SRC		=	./server/src/main.c
+SRC		=	./main.c \
+			$(wildcard ../src/*.c)
+
 
 OBJ		=	$(SRC:.c=.o)
 
